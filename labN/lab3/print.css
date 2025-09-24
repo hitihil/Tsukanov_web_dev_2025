@@ -1,0 +1,44 @@
+/* Скрываем элементы управления, ненужные на печати */
+header,
+nav,
+button,
+footer {
+    display: none;
+}
+
+/* Основной контент для печати */
+body {
+    background-color: white;
+    color: black;
+    font-size: 14px;
+}
+
+.menu-grid {
+    display: block;
+    margin: 0;
+    padding: 0;
+}
+
+.dish-card {
+    padding: 10px;
+    border: 1px solid #000;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.dish-card img {
+    width: 100%;
+    border-radius: 5px;
+    margin-bottom: 5px;
+}
+
+.dish-card .name,
+.dish-card .price,
+.dish-card .weight {
+    color: black;
+    margin: 2px 0;
+}
+
+.dish-card button {
+    display: none;
+}
