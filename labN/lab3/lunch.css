@@ -123,11 +123,6 @@
         text-align: center;
     }
 
-    /* Блок "О нас" — изображение растягиваем на всю ширину */
-    .about img {
-        width: 100%;
-    }
-
     /* Таблица — уменьшаем шрифт на 2px */
     table {
         font-size: 12px;
@@ -139,5 +134,120 @@
     /* Таблица — уменьшаем шрифт ещё на 2px */
     table {
         font-size: 10px; /* если было 12px для ≤600px */
+    }
+}
+
+/* === Блок оформления заказа === */
+.order-section {
+    margin-top: 40px;
+    padding: 20px;
+    background: #f9f9f9;
+    border-top: 2px solid #ddd;
+}
+
+.order-title {
+    text-align: center;
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+}
+
+/* Контейнер с двумя колонками */
+.order-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+/* Левая и правая части */
+.order-left,
+.order-right {
+    flex: 1;
+    background: #fff;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.order-left h3,
+.order-right h3 {
+    text-align: center;
+    margin-bottom: 15px;
+    font-size: 1.4rem;
+}
+
+/* Элементы форм */
+.form-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 14px;
+}
+
+.form-group textarea {
+    resize: none;
+}
+
+.form-group small {
+    font-size: 12px;
+    color: #888;
+}
+
+/* Чекбокс */
+.checkbox {
+    flex-direction: row;
+    align-items: center;
+}
+
+.checkbox label {
+    margin-left: 8px;
+    font-weight: normal;
+}
+
+/* Кнопки */
+.form-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.btn-reset,
+.btn-submit {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.btn-reset {
+    background-color: #f1f1f1;
+}
+
+.btn-submit {
+    background-color: tomato;
+    color: white;
+}
+
+.btn-submit:hover {
+    background-color: darkred;
+}
+
+/* === Адаптивность === */
+@media (max-width: 800px) {
+    .order-container {
+        flex-direction: column;
     }
 }
