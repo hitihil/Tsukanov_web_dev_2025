@@ -1,0 +1,273 @@
+/* === Сетка меню === */
+.menu-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    margin: 20px;
+}
+
+/* === Карточка блюда === */
+.dish-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #fff;
+    padding: 30px 40px;
+    border-radius: 35px;
+    cursor: pointer;
+    filter: drop-shadow(17px 19px 24px rgba(0, 0, 0, 0.13));
+    transition: all 0.3s ease;
+}
+
+/* === Центрирование заголовка === */
+.soups h2,
+.mains h2,
+.drinks h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+
+/* === Hover эффект для блока блюда === */
+.dish-card:hover {
+    border: 2px solid tomato;
+}
+
+.dish-card:hover button {
+    background-color: tomato;
+    color: white;
+}
+
+/* === Изображение === */
+.dish-card img {
+    width: 100%;
+    border-radius: 35px;
+    margin-bottom: 15px;
+}
+
+/* === Название, цена, вес === */
+.dish-card .name {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin: 5px 0;
+    text-align: center;
+}
+
+.dish-card .price {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin: 5px 0;
+}
+
+.dish-card .weight {
+    color: gray;
+    margin: 5px 0 15px 0;
+}
+
+/* === Кнопка добавления === */
+.dish-card button {
+    background-color: #f1eee9;
+    padding: 10px 30px;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+/* === Адаптивность === */
+/* ===== До 800px ===== */
+@media (max-width: 800px) {
+    /* Сетка с блюдами: 2 колонки */
+    .menu-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    /* Навигационное меню: равномерное распределение элементов */
+    nav {
+        justify-content: space-between; /* main axis: одинаковое расстояние */
+        flex-wrap: wrap; /* разрешаем перенос элементов */
+    }
+
+    /* Блок "О нас" — изображение уменьшаем */
+    .about img {
+        width: 500px;
+    }
+}
+
+/* ===== До 600px ===== */
+@media (max-width: 600px) {
+    /* Сетка с блюдами: 1 колонка */
+    .menu-grid {
+        grid-template-columns: 1fr;
+    }
+
+    /* Главный заголовок */
+    h1 {
+        text-align: center;
+    }
+
+    /* Навигация: вертикальный флекс, элементы по центру */
+    nav {
+        flex-direction: column;
+        align-items: center; /* cross axis: по центру */
+    }
+
+    nav a {
+        font-size: 18px; /* увеличиваем шрифт на 4px */
+        margin: 5px 0;
+    }
+
+    /* Заголовки секций (супы, главные блюда, напитки) */
+    section h2 {
+        text-align: center;
+    }
+
+    /* Таблица — уменьшаем шрифт на 2px */
+    table {
+        font-size: 12px;
+    }
+}
+
+/* ===== До 400px ===== */
+@media (max-width: 400px) {
+    /* Таблица — уменьшаем шрифт ещё на 2px */
+    table {
+        font-size: 10px; /* если было 12px для ≤600px */
+    }
+}
+
+/* === Блок оформления заказа === */
+.order-section {
+    margin-top: 40px;
+    padding: 20px;
+    background: #f9f9f9;
+    border-top: 2px solid #ddd;
+}
+
+.order-title {
+    text-align: center;
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+}
+
+/* Контейнер с двумя колонками */
+.order-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+/* Левая и правая части */
+.order-left,
+.order-right {
+    flex: 1;
+    background: #fff;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.order-left h3,
+.order-right h3 {
+    text-align: center;
+    margin-bottom: 15px;
+    font-size: 1.4rem;
+}
+
+/* Элементы форм */
+.form-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 14px;
+}
+
+.form-group textarea {
+    resize: none;
+}
+
+.form-group small {
+    font-size: 12px;
+    color: #888;
+}
+
+/* Чекбокс */
+.checkbox {
+    flex-direction: row;
+    align-items: center;
+}
+
+.checkbox label {
+    margin-left: 8px;
+    font-weight: normal;
+}
+
+/* Кнопки */
+.form-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.btn-reset,
+.btn-submit {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.btn-reset {
+    background-color: #f1f1f1;
+}
+
+.btn-submit {
+    background-color: tomato;
+    color: white;
+}
+
+.btn-submit:hover {
+    background-color: darkred;
+}
+
+/* === Адаптивность === */
+@media (max-width: 800px) {
+    .order-container {
+        flex-direction: column;
+    }
+}
+
+/* Выделение выбранной карточки (как hover рамка) */
+.dish-card.selected {
+  border: 2px solid tomato;
+}
+
+/* Итоговая стоимость (скрываем, пока нет заказа) */
+.total-price {
+  font-weight: 700;
+  margin-top: 12px;
+  margin-bottom: 12px;
+  display: none; /* скрываем по умолчанию */
+}
+
+/* Блоки категорий скрыты по умолчанию */
+#soup-block,
+#main-block,
+#drink-block {
+  display: none;
+}

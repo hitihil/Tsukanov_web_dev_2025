@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Составить ланч | FreshLunch</title>
+
+  <!-- Шрифты и стили -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="lunch.css">
+</head>
+<body>
+
+  <!-- Шапка -->
+  <header>
+    <h1>FreshLunch</h1>
+    <nav>
+      <a href="lab4.html">Главная</a>
+      <a href="#" class="active">Составить ланч</a>
+    </nav>
+  </header>
+
+  <!-- Основной контент -->
+  <main>
+    <!-- Супы -->
+    <section class="soups">
+      <h2>Супы</h2>
+      <div class="menu-grid"></div>
+    </section>
+
+    <!-- Главные блюда -->
+    <section class="mains">
+      <h2>Главные блюда</h2>
+      <div class="menu-grid"></div>
+    </section>
+
+    <!-- Напитки -->
+    <section class="drinks">
+      <h2>Напитки</h2>
+      <div class="menu-grid"></div>
+    </section>
+
+    <!-- Блок оформления заказа -->
+    <section class="order-section">
+      <h2 class="order-title">Сделать заказ</h2>
+
+      <form class="order-container" action="https://httpbin.org/post" method="POST">
+        <!-- Левый столбец: Ваш заказ -->
+        <div class="order-left">
+          <h3>Ваш заказ</h3>
+          <div class="form-group">
+            <label for="soup">Суп</label>
+            <select id="soup" name="soup">
+              <option value="" selected>Выберите суп</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="main">Главное блюдо</label>
+            <select id="main" name="main">
+              <option value="" selected>Выберите главное блюдо</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="drink">Напиток</label>
+            <select id="drink" name="drink">
+              <option value="" selected>Выберите напиток</option>
+            </select>
+          </div>
+          <div class="total-price"></div>
+          <div class="form-group">
+            <label for="comment">Комментарий к заказу</label>
+            <textarea id="comment" name="comment" rows="4" placeholder="Введите ваш комментарий..."></textarea>
+          </div>
+        </div>
+
+        <!-- Правый столбец: Ваши данные -->
+        <div class="order-right">
+          <h3>Ваши данные</h3>
+          <div class="form-group">
+            <label for="name">Имя</label>
+            <input type="text" id="name" name="name" placeholder="Введите ваше имя" required>
+          </div>
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="Введите вашу почту" required>
+          </div>
+          <div class="form-group checkbox">
+            <input type="checkbox" id="promo" name="promo">
+            <label for="promo">Получать информацию о скидках и акциях</label>
+          </div>
+          <div class="form-group">
+            <label for="phone">Номер телефона</label>
+            <input type="tel" id="phone" name="phone" placeholder="+7 (___) ___-__-__" required>
+          </div>
+          <div class="form-group">
+            <label for="address">Адрес доставки</label>
+            <input type="text" id="address" name="address" placeholder="Доставка только по Москве" required>
+          </div>
+          <div class="form-group">
+            <p>Время доставки:</p>
+            <label><input type="radio" name="delivery_time" value="asap" checked> Как можно скорее</label>
+            <label><input type="radio" name="delivery_time" value="scheduled"> К указанному времени</label>
+          </div>
+          <div class="form-group">
+            <label for="time">Укажите время доставки</label>
+            <input type="time" id="time" name="time" min="07:00" max="23:00">
+            <small>Доступное время доставки с 7:00 до 23:00</small>
+          </div>
+          <div class="form-buttons">
+            <button type="reset" class="btn-reset">Сбросить</button>
+            <button type="submit" class="btn-submit">Отправить</button>
+          </div>
+        </div>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 FreshLunch. Все права защищены.</p>
+    <p>Телефон: +7 (900) 123-45-67 | Email: info@freshlunch.ru</p>
+  </footer>
+
+  <!-- JS -->
+  <script src="array.js"></script>
+  <script src="render.js"></script>
+  <script src="order.js"></script>
+</body>
+</html>
