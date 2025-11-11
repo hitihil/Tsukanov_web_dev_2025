@@ -1,0 +1,503 @@
+/* Общие стили */
+body {
+    font-family: 'Montserrat', Arial, sans-serif;
+    margin: 0;
+    background-color: #f9f9f9;
+    line-height: 1.6;
+}
+
+/* Шапка сайта */
+header {
+    background-color: #ff7043;
+    color: white;
+    padding: 15px;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2rem;
+}
+
+header nav {
+    margin-top: 10px;
+}
+
+header nav a {
+    color: white;
+    margin: 0 15px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+/* Баннер */
+.banner {
+    text-align: center;
+    margin: 20px;
+    padding: 30px;
+    background: linear-gradient(135deg, #ff7043, #ff8a65);
+    border-radius: 15px;
+    color: white;
+}
+
+.banner img {
+    width: 80%;
+    max-width: 600px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+.banner h2 {
+    margin-top: 20px;
+    font-size: 1.8rem;
+}
+
+.banner p {
+    margin-top: 10px;
+    font-size: 1.1rem;
+    opacity: 0.9;
+}
+
+/* Таблица меню */
+.menu-table {
+    text-align: center;
+    margin: 40px 20px;
+    padding: 20px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.menu-table h2 {
+    color: #ff7043;
+    margin-bottom: 20px;
+}
+
+.menu-table table {
+    margin: 0 auto;
+    border-collapse: collapse;
+    width: 90%;
+    max-width: 800px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+.menu-table th,
+.menu-table td {
+    border: 1px solid #ddd;
+    padding: 12px;
+    text-align: left;
+}
+
+.menu-table th {
+    background-color: #ff7043;
+    color: white;
+    font-weight: 600;
+}
+
+.menu-table tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.menu-table tr:hover {
+    background-color: #ffebee;
+}
+
+/* Футер */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 25px 15px;
+    margin-top: 40px;
+}
+
+footer p {
+    margin: 5px 0;
+}
+
+/* Форма обратной связи */
+.feedback-form {
+    max-width: 600px;
+    margin: 40px auto;
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+}
+
+.feedback-form h2 {
+    text-align: center;
+    margin-bottom: 25px;
+    color: #ff7043;
+    font-size: 1.5rem;
+}
+
+.feedback-form form {
+    display: flex;
+    flex-direction: column;
+}
+
+.feedback-form label {
+    margin: 12px 0 6px;
+    font-weight: 600;
+    color: #333;
+}
+
+.feedback-form input[type="text"],
+.feedback-form input[type="email"],
+.feedback-form select,
+.feedback-form textarea,
+.feedback-form input[type="file"] {
+    width: 100%;
+    padding: 12px;
+    box-sizing: border-box;
+    border-radius: 8px;
+    border: 2px solid #ddd;
+    font-size: 14px;
+    transition: border-color 0.3s ease;
+}
+
+.feedback-form input:focus,
+.feedback-form select:focus,
+.feedback-form textarea:focus {
+    border-color: #ff7043;
+    outline: none;
+}
+
+.feedback-form input[type="radio"],
+.feedback-form input[type="checkbox"] {
+    margin-right: 8px;
+}
+
+.feedback-form button {
+    margin-top: 20px;
+    padding: 12px 25px;
+    background-color: #ff7043;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.feedback-form button:hover {
+    background-color: #e64a19;
+    transform: translateY(-2px);
+    box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+}
+
+/* Форма аутентификации */
+.auth-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 200px 0;
+    background: url('lanch1.jpg') no-repeat center center;
+    background-size: cover;
+    position: relative;
+}
+
+.auth-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0,0,0,0.5);
+}
+
+.auth-form {
+    background-color: rgba(255, 255, 255, 0.95);
+    padding: 40px;
+    border-radius: 15px;
+    max-width: 400px;
+    width: 90%;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    z-index: 1;
+}
+
+.auth-form h2 {
+    text-align: center;
+    margin-bottom: 25px;
+    color: #ff7043;
+    font-size: 1.5rem;
+}
+
+.auth-form label {
+    margin: 12px 0 6px;
+    font-weight: 600;
+    color: #333;
+}
+
+.auth-form input[type="text"],
+.auth-form input[type="password"] {
+    padding: 12px;
+    width: 100%;
+    border-radius: 8px;
+    border: 2px solid #ddd;
+    box-sizing: border-box;
+    font-size: 14px;
+    transition: border-color 0.3s ease;
+}
+
+.auth-form input:focus {
+    border-color: #ff7043;
+    outline: none;
+}
+
+.auth-form input[type="checkbox"] {
+    margin-right: 8px;
+}
+
+.auth-form button {
+    margin-top: 20px;
+    padding: 12px;
+    background-color: #ff7043;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.auth-form button:hover {
+    background-color: #e64a19;
+    transform: translateY(-2px);
+    box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+}
+
+/* Кнопка составить ланч */
+.btn {
+    display: inline-block;
+    padding: 15px 30px;
+    background-color: #ff7043;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    font-size: 1.1rem;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+}
+
+.btn:hover {
+    background-color: #e64a19;
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+/* Контейнер для кнопки */
+.create-lunch-btn {
+    display: flex;
+    justify-content: center;
+    margin: 40px 0;
+}
+
+/* ===== До 800px ===== */
+@media (max-width: 800px) {
+    nav {
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+    
+    .about img {
+        width: 500px;
+    }
+    
+    .banner {
+        margin: 10px;
+        padding: 20px;
+    }
+    
+    .menu-table {
+        margin: 20px 10px;
+    }
+}
+
+/* ===== До 600px ===== */
+@media (max-width: 600px) {
+    h1 {
+        text-align: center;
+        font-size: 1.5rem;
+    }
+    
+    nav {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    nav a {
+        font-size: 16px;
+        margin: 5px 10px;
+    }
+    
+    .about img {
+        width: 100%;
+    }
+    
+    table {
+        font-size: 12px;
+    }
+    
+    .banner h2 {
+        font-size: 1.4rem;
+    }
+    
+    .banner p {
+        font-size: 1rem;
+    }
+    
+    .auth-section {
+        padding: 100px 0;
+    }
+}
+
+/* ===== До 400px ===== */
+@media (max-width: 400px) {
+    table {
+        font-size: 10px;
+    }
+    
+    .feedback-form,
+    .auth-form {
+        padding: 20px;
+        margin: 20px 10px;
+    }
+    
+    .btn {
+        padding: 12px 25px;
+        font-size: 1rem;
+    }
+}
+
+/* === О Нас === */
+.about {
+    padding: 40px 20px;
+    text-align: center;
+    background: white;
+    margin: 40px 20px;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+}
+
+.about h2 {
+    color: #ff7043;
+    margin-bottom: 30px;
+    font-size: 1.8rem;
+}
+
+.about-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.about img {
+    width: 400px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+.about p {
+    max-width: 400px;
+    text-align: left;
+    font-size: 16px;
+    line-height: 1.6;
+    color: #555;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* Цвет ссылки при наведении */
+nav a:hover {
+    color: #7CFC00;
+    transform: translateY(-1px);
+}
+
+/* Цвет активного пункта меню */
+nav a.active {
+    color: #000000;
+    font-weight: 600;
+}
+
+/* Блок "О нас" — изображение растягиваем на всю ширину */
+@media (max-width: 768px) {
+    .about img {
+        width: 100%;
+        max-width: 400px;
+    }
+    
+    .about-content {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .about p {
+        text-align: center;
+        max-width: none;
+    }
+}
+
+/* Стили для фильтров (добавлены для новой функциональности) */
+.filters {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin: 20px 0;
+    flex-wrap: wrap;
+}
+
+.filter-btn {
+    padding: 10px 20px;
+    border: 2px solid #ff7043;
+    background: white;
+    color: #ff7043;
+    border-radius: 25px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    font-size: 14px;
+}
+
+.filter-btn:hover {
+    background: #ff7043;
+    color: white;
+    transform: translateY(-2px);
+}
+
+.filter-btn.active {
+    background: #ff7043;
+    color: white;
+    box-shadow: 0 3px 10px rgba(255, 112, 67, 0.3);
+}
+
+/* Стили для новых категорий */
+.salads, .desserts {
+    background: white;
+    margin: 30px 20px;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+}
+
+.salads h2, .desserts h2 {
+    color: #000000;
+    text-align: center;
+    margin-bottom: 25px;
+    font-size: 1.5rem;
+}
