@@ -12,7 +12,7 @@ async function submitOrderToServer(orderData) {
         return {
             ...result,
             server_status: 'connected',
-            message: 'Заказ успешно создан на сервере!'
+            message: 'Заказ успешно создан!'
         };
         
     } catch (error) {
@@ -73,7 +73,7 @@ async function submitOrderRealAPI(orderData) {
 }
 
 async function submitOrderDemo(orderData) {
-    console.log('🎭 Работаем в демо-режиме...');
+    console.log('Работаем в демо-режиме...');
     await new Promise(resolve => setTimeout(resolve, 1000));
     
     const storageOrder = window.storageManager.loadOrderFromStorage();
@@ -105,4 +105,4 @@ window.orderAPI = {
     submitOrderToServer
 };
 
-console.log('🎯 Order API загружен');
+console.log('Order API загружен');
