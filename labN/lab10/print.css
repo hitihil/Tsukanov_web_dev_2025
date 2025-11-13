@@ -1,0 +1,185 @@
+/* Скрываем элементы управления, ненужные на печати */
+header,
+nav,
+button,
+footer,
+.filters,
+.order-section,
+.form-buttons {
+    display: none;
+}
+
+/* Основной контент для печати */
+body {
+    background-color: white;
+    color: black;
+    font-size: 14px;
+    margin: 0;
+    padding: 10px;
+}
+
+/* Заголовки для печати */
+h1, h2, h3 {
+    color: black;
+    margin: 10px 0;
+}
+
+/* Сетка меню для печати */
+.menu-grid {
+    display: block;
+    margin: 0;
+    padding: 0;
+}
+
+/* Карточки блюд для печати */
+.dish-card {
+    display: block;
+    padding: 10px;
+    border: 1px solid #000;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    page-break-inside: avoid;
+    break-inside: avoid;
+}
+
+.dish-card img {
+    width: 100%;
+    border-radius: 5px;
+    margin-bottom: 5px;
+}
+
+.dish-card .name,
+.dish-card .price,
+.dish-card .weight {
+    color: black;
+    margin: 2px 0;
+    font-weight: normal;
+}
+
+.dish-card button {
+    display: none;
+}
+
+/* Стили для новых категорий */
+.soups h2::before {
+    content: "🍲 ";
+}
+
+.mains h2::before {
+    content: "🍽️ ";
+}
+
+.salads h2::before {
+    content: "🥗 ";
+}
+
+.drinks h2::before {
+    content: "🥤 ";
+}
+
+.desserts h2::before {
+    content: "🍰 ";
+}
+
+/* Улучшенное отображение таблицы для печати */
+.menu-table table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 10px 0;
+}
+
+.menu-table th,
+.menu-table td {
+    border: 1px solid #000;
+    padding: 8px;
+    text-align: left;
+}
+
+.menu-table th {
+    background-color: #f0f0f0;
+}
+
+/* Формы для печати */
+.auth-form,
+.feedback-form {
+    border: 1px solid #000;
+    padding: 15px;
+    margin: 10px 0;
+    page-break-inside: avoid;
+}
+
+.auth-form h2,
+.feedback-form h2 {
+    border-bottom: 1px solid #000;
+    padding-bottom: 5px;
+}
+
+/* Скрываем интерактивные элементы форм */
+input, select, textarea {
+    border: 1px solid #000 !important;
+    background: white !important;
+    color: black !important;
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+    display: none;
+}
+
+/* Отображаем значения чекбоксов и радиокнопок */
+input[type="checkbox"]:checked::before {
+    content: "✓ ";
+}
+
+input[type="radio"]:checked::before {
+    content: "● ";
+}
+
+/* Баннер для печати */
+.banner {
+    text-align: center;
+    margin: 10px 0;
+}
+
+.banner img {
+    max-width: 300px;
+}
+
+/* Блок "О нас" для печати */
+.about-content {
+    display: block;
+}
+
+.about img {
+    max-width: 300px;
+    float: left;
+    margin-right: 15px;
+    margin-bottom: 10px;
+}
+
+/* Кнопки для печати */
+.btn {
+    display: none;
+}
+
+/* Убираем тени и градиенты */
+* {
+    box-shadow: none !important;
+    text-shadow: none !important;
+    background-image: none !important;
+}
+
+/* Улучшаем читаемость текста */
+p, li, td {
+    line-height: 1.4;
+}
+
+/* Предотвращаем разрыв между заголовком и контентом */
+h2, h3 {
+    page-break-after: avoid;
+}
+
+/* Настройки для страницы */
+@page {
+    margin: 1cm;
+}
