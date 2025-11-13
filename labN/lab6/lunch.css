@@ -333,24 +333,25 @@
     font-size: 1.8rem;
 }
 
-/* Grid-контейнер с 2 колонками для 4 комбо */
+/* Grid-контейнер с 3 колонками для 6 комбо */
 .combo-grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr); /* 2 колонки вместо 3 */
-    gap: 20px;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px; /* увеличиваем расстояние между карточками */
     margin-bottom: 20px;
 }
 
-/* Flex-контейнер для варианта ланча */
+/* Flex-контейнер для варианта ланча - ГОРИЗОНТАЛЬНОЕ расположение */
 .combo-item {
     display: flex;
-    flex-direction: column;
-    gap: 15px;
+    align-items: center;
+    gap: 12px; /* увеличиваем расстояние между иконками */
     border: 2px solid #ff7043;
     border-radius: 15px;
     padding: 20px;
     background: #fff;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    min-height: 100px; /* увеличиваем высоту для больших иконок */
 }
 
 .combo-item:hover {
@@ -358,54 +359,64 @@
     box-shadow: 0 10px 25px rgba(255, 112, 67, 0.2);
 }
 
-/* Flex-контейнер для блюда (направление сверху вниз) */
+/* Flex-контейнер для блюда */
 .combo-dish {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 8px;
+    gap: 8px; /* увеличиваем расстояние между иконкой и текстом */
+    flex: 1;
 }
 
-/* Изображение блюда с transform при наведении */
+/* УВЕЛИЧЕННЫЕ иконки */
 .combo-dish img {
-    width: 80px;
-    height: 80px;
+    width: 75px;
+    height: 75px;
     object-fit: cover;
     border-radius: 10px;
     border: 2px solid #f0f0f0;
     transition: transform 0.3s ease;
 }
 
-/* Transform с translateY и scale при наведении */
 .combo-dish:hover img {
-    transform: translateY(-5px) scale(1.1);
+    transform: translateY(-3px) scale(1.1);
 }
 
-/* Подпись */
+/* Подпись под иконкой */
 .combo-dish span {
     font-weight: 500;
     color: #333;
     text-align: center;
-    font-size: 14px;
+    font-size: 13px; /* немного увеличиваем шрифт */
+    line-height: 1.2;
 }
 
-/* Блок информации о десертах (шрифт меньше на 2 пункта) */
-.dessert-info {
+/* Особые стили для комбо с десертом */
+.dessert-combo {
+    flex-direction: column; /* вертикальное расположение */
+    justify-content: center;
     text-align: center;
-    padding: 15px;
-    background: #fff8e1;
-    border-radius: 10px;
-    border-left: 4px solid #ffd54f;
+    gap: 10px; /* расстояние между иконкой и текстом */
 }
 
-.dessert-info p {
+.dessert-combo .combo-dish {
+    margin-bottom: 5px;
+}
+
+.dessert-note {
+    width: 100%;
+}
+
+.dessert-note p {
     margin: 0;
     color: #666;
-    font-size: 12px; /* На 2 пункта меньше чем у подписи (14px - 2px = 12px) */
+    font-size: 12px; /* увеличиваем шрифт примечания */
     font-style: italic;
+    line-height: 1.3;
+    text-align: center;
 }
 
-/* === Адаптивность для комбо-блока === */
+/* Адаптивность для комбо-блока */
 @media (max-width: 900px) {
     .combo-grid {
         grid-template-columns: repeat(2, 1fr);
@@ -419,11 +430,20 @@
     
     .combo-item {
         padding: 15px;
+        min-height: 90px;
     }
     
     .combo-dish img {
-        width: 60px;
+        width: 60px; /* уменьшаем для мобильных */
         height: 60px;
+    }
+    
+    .combo-dish span {
+        font-size: 12px;
+    }
+    
+    .dessert-note p {
+        font-size: 11px;
     }
 }
 
